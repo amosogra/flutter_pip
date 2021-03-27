@@ -1,6 +1,6 @@
 class PipRatioException implements Exception {
 
-  final String message;
+  final String? message;
 
   PipRatioException(this.message);
 
