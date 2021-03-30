@@ -15,7 +15,7 @@ class _PipWidgetState extends State<PipWidget> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding?.instance?.addObserver(new LifecycleEventHandler(resumeCallBack: () async {
+    WidgetsBinding.instance?.addObserver(new LifecycleEventHandler(resumeCallBack: () async {
       bool isInPipMode = await FlutterPip.isInPictureInPictureMode();
       widget.onResume?.call(isInPipMode);
       return;
